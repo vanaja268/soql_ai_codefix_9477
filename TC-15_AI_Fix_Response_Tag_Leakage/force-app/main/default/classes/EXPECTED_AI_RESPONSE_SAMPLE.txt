@@ -1,0 +1,19 @@
+Use this file only as a parser-validation reference.
+
+A problematic model response may conceptually look like:
+
+<fixed_code_codefix>
+FIRST DRAFT CODE
+</fixed_code_codefix>
+
+I reconsidered the implementation.
+
+<fixed_code_codefix>
+FINAL CODE ONLY
+</fixed_code_codefix>
+
+Expected parser behavior:
+- take only the LAST fixed_code_codefix block
+- strip XML-like tags
+- strip Markdown backticks
+- do not write explanatory prose into the Apex class
